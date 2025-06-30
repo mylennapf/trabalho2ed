@@ -358,7 +358,6 @@ double get_time() {
 
 // Função para testar diferentes taxas de ocupação
 void teste_taxa_ocupacao(const char* filename) {
-    printf("Testando diferentes taxas de ocupação...\n");
     printf("Taxa\tHash Simples (s)\tHash Duplo (s)\n");
     
     float taxas[] = {0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.99};
@@ -428,8 +427,8 @@ void teste_overhead_insercao(const char* filename) {
     insere1000(filename);
     time_1000 = get_time() - start;
     
-    printf("Tempo inserção 6100 buckets: %.6f segundos\n", time_6100);
-    printf("Tempo inserção 1000 buckets: %.6f segundos\n", time_1000);
+    printf("Tempo para inserir 6100 buckets: %.6f segundos\n", time_6100);
+    printf("Tempo para inserir 1000 buckets: %.6f segundos\n", time_1000);
     printf("Overhead estrutura dinâmica: %.2f%%\n", 
            ((time_1000 - time_6100) / time_6100) * 100);
 }
